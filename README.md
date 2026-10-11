@@ -1,9 +1,9 @@
-# MAT2007_Project
+
 Project: Depression in numbers
 Introduction to Programming (MAT2007) data analysis project
 Emma Schwarz
 
-TWo question to answer:
+Two question to answer:
 1. In which country was depression most common in 2017?
 2. Were men or women more globally affected in 2017?
 
