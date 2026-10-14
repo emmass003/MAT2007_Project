@@ -1,8 +1,5 @@
 # Question 2: Are men or women more likely to have depression in 2017?
-# Python version of the plots made by Q2_Men-vs_women.R
-#
 # Introduction to programming (MAT2007) - data analysis project
-#
 # All the analysis (cleaning, sub-sampling) is done in R. This script only
 # draws the plots. It reads the two CSV files that Q2_Men-vs_women.R writes:
 #   question2_data.csv    : the cleaned data, one row per country
