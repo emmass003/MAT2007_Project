@@ -27,14 +27,18 @@ How to run the Codes:
 No extra packages are needed because the script only use base R.
 
 How to do it:
-1. Put the scripts (question1_countries.R and question2_men_women) and the Mental health Depression Disorder Data.csv in the same folder.
+1. Put the scripts (`Q1_Countries.R`, `Q2_Men-vs_women.R`, `Q1_Plots_python.py` and `Q2_Plots_Python.py`) and the Mental health Depression Disorder Data.csv in the same folder.
 2. Open folder in VS code
-Open a new terminal in VS code and run the script in any desireable order.
-each script will test its own functions, clean the data and will print the results into the terminal and will save its output in the same folder.
+3. Open a new terminal in VS code and run the R scripts in any desireable order.Each script will test its own functions, clean the data and will print the results into the terminal and will save its output in the same folder.
+4. Then run the two Python scripts. They read the CSV files made by the R scripts and draw the same plots in Python. Python needs numpy, pandas and matplotlib (Put this in terminal if it doesn't work -> `pip install numpy pandas matplotlib`).
 
 What script makes which files?
-question1_countries.R --> question1_plot_countries.png, question1_ranking.csv
-question1_men_women.R -_> question2_plot1_histograms.png (was not used for my report or presentaion), question2_plot2_scatter.png and question2_plot3_bar_chart.png
+
+
+- `Q1_Countries.R` --> `question1_plot_countries.png`, `question1_ranking.csv`, `question1_average.csv` 
+- `Q2_Men-vs_women.R` -->  `question2_plot1_histograms.png` (not used in the report or presentation), `question2_plot2_scatter.png`, `question2_plot3_bar_chart.png`, `question2_data.csv`, `question2_results.csv` 
+- `Q1_Plots_python.py` --> `question1_plot_countries_py.png` 
+- `Q2_Plots_Python.py` --> `question2_plot1_histograms_py.png` (not used in the report or presentation), `question2_plot2_scatter_py.png`, `question2_plot3_bar_chart_py.png` 
 
 Conditions:
 1. As already mentioned before the scripts must be in the same folder as the CSV file with the data and the CSV file must keep it's original name. 
@@ -44,4 +48,4 @@ Conditions:
  -> data_ file: the name of the CVS file
  -> year_to_study: 2017 by default
  -> n_subsamples: groups for the subsampling       technique (me: 5)
- ->question1_countries.R  has n_to_show: how many countries should be shown in the ranking ( me: five top and five bottom)
+ ->Q1_Countries.R  has n_to_show: how many countries should be shown in the ranking ( me: five top and five bottom)
