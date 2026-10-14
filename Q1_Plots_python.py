@@ -1,13 +1,10 @@
 # Question 1: In which countries is depression most common in 2017?
-# Python version of the plot made by Q1_Countries.R
-#
 # Introduction to programming (MAT2007) - data analysis project
-#
 # All the analysis (cleaning, sub-sampling, ranking) is done in R. This script
 # only draws the plot. It reads the two CSV files that Q1_Countries.R writes:
 #   question1_ranking.csv : all countries, from the highest to the lowest
 #   question1_average.csv : the average of all countries with its uncertainty
-#
+
 # How to run:
 #   1. Run Q1_Countries.R first (it makes the two CSV files)
 #   2. In the same folder: python question1_countries_plot.py
