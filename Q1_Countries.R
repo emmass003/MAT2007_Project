@@ -1,10 +1,7 @@
-
- 
 # Question 1: In which countries is depression most common in 2017?
-#
+
 # Introduction to programming (MAT2007) - data analysis project
-# (the second question of the project is answered in question2_men_women.R)
-#
+
 # What this script does, step by step:
 #  1. Tests its own functions on small examples
 #  2. Reads the dataset (one CSV file downloaded from Kaggle)
@@ -21,8 +18,8 @@
 # main program at the bottom calls them one after the other.
 #
 # How to run (from the folder that contains this script and the CSV file):
-#   Rscript question1_countries.R
-#
+#   Rscript Q1_Countries.R
+
 # Only base R is used, so no extra packages have to be installed.
  
  
