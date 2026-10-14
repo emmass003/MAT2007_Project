@@ -14,6 +14,8 @@
 #   9. Calculates the result: the difference between women and men, with its
 #      uncertainty (sub-sampling method)
 #   10. Plot 3: bar chart of the average for men and for women, with error bars
+#   11. Saves the cleaned data and the results in CSV files
+#       (the Python plot script reads these to draw the same plots)
 
 # Every step is done by a function. The functions are written first, and the
 # main program at the bottom calls them one after the other.
@@ -49,6 +51,10 @@ female_colour <- "darkorange"
 histogram_file <- "question2_plot1_histograms.png"
 scatter_file   <- "question2_plot2_scatter.png"
 bar_chart_file <- "question2_plot3_bar_chart.png"
+
+# Names of the CSV files with the results (read by the Python plot script)
+data_file_out <- "question2_data.csv"
+results_file  <- "question2_results.csv"
 
 #                 FUNCTIONS
 # Each function does one small job, so it can be tested on its own.
@@ -661,4 +667,18 @@ print_result(results, one_year, sex_table)
 # 10. Plot 3: bar chart, men against women
 plot_bar_chart(results, nrow(one_year), bar_chart_file)
 
-cat("Done. Created:", histogram_file, scatter_file, bar_chart_file, "\n")
+# 11. Save the results
+# The cleaned data (one row per country) and the four results with their
+# uncertainty. The Python plot script reads these two files to draw the
+# same plots, so it does not have to repeat the cleaning or the sub-sampling.
+write.csv(one_year[, c("country", "male", "female", "difference", "ratio")],
+          data_file_out, row.names = FALSE)
+write.csv(data.frame(quantity    = rownames(results),
+                     mean        = results$mean,
+                     uncertainty = results$uncertainty,
+                     year        = year_to_study,
+                     n_countries = nrow(one_year)),
+          results_file, row.names = FALSE)
+
+cat("Done. Created:", histogram_file, scatter_file, bar_chart_file,
+    data_file_out, results_file, "\n")
